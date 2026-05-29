@@ -1,29 +1,29 @@
-# LEVEL
-priority_score = 0
-priorityRED = False
-priorityYELLOW = False
-priorityGREEN = False
-
-# VARIAVEIS
-elderly = False
-adult = False
-child = False
-
 while True:
+    # LEVEL
+    priority_score = 0
+    priorityRED = False
+    priorityYELLOW = False
+    priorityGREEN = False
+
+    #VARIABLES
+    elderly = False
+    adult = False
+    child = False
+
     print("\n------------------------------")
     print("Starting an new triage process...")
     print("\n------------------------------")
     patient = input("What's your name? ")
     if patient.strip() == "":
         print("Invalid name. Please enter a valid name.")
-        break
+        continue
 
     print("Hello, " + patient + "! Please answer the following questions to determine your priority level.")
 
     age = int(input("What is your age? "))
     if age < 0:
         print("Invalid age. Please enter a valid age.")
-        break
+        continue
     
     temperature = float(input("What is your body temperature? "))
     headache = input("Do you have a headache? (y/n) ")
